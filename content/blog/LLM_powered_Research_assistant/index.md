@@ -102,7 +102,7 @@ effective are:
     responsible for the low-level tasks like crawling the web, extracting
     information, summarizing it, and presenting it in a readable format.
 
-![Master-Slave Architecture](src/LLM_powered_Research_assistant/flow-02.webp)
+![Master-Slave Architecture](flow-02.webp)
 
 2. **Flow-Based Architecture**: In this architecture, the flow of information
    is represented as a directed graph. Each node in the graph is a task, and
@@ -111,7 +111,7 @@ effective are:
    also backtrack if it gets stuck at a task or needs to redo a task. In this
    example, the emphasis is on self-reflective nature of implementation.
 
-![Flow-Based Architecture](src/LLM_powered_Research_assistant/flow-01.webp){height=50%}
+![Flow-Based Architecture](flow-01.webp){height=50%}
 
 ## Implementation
 
