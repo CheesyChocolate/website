@@ -120,7 +120,7 @@ remote_repository_url = "https://github.com/CheesyChocolate/website"
 # Accepted values are "github", "gitlab", "gitea", and "codeberg".
 remote_repository_git_platform = "auto"  # Defaults to "auto".
 # Branch in the repo hosting the Zola site.
-remote_repository_branch = "main"  # Defaults to "main".
+remote_repository_branch = "trunk"  # Defaults to "main".
 # Show a link to the commit history of updated posts, right next to the last updated date.
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
 show_remote_changes = true  # Defaults to true.
