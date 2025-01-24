@@ -11,4 +11,7 @@ max_projects = 3
 show_projects_first = false
 +++
 
-Hello there.
+There's nothing special here.
+
+The previous blog destroyed. It takes time to reformat everything for the new
+blog.
