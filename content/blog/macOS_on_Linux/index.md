@@ -1,7 +1,7 @@
 +++
 title = "macOS on Linux"
-date = 2025-01-10
-updated = 2025-01-10
+date = 2025-01-24
+updated = 2025-01-25
 description = "How to run macOS on Linux, and how to optimize and configure macOS post-installation."
 
 [taxonomies]
