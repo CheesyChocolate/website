@@ -5,12 +5,7 @@ updated = 2025-01-10
 description = "How to build a research assistant powered by LLM."
 
 [taxonomies]
-tags = ["showcase",
-        "tutorial",
-        "AI",
-        "Research",
-        "Assistant",
-        "NLP",
+tags = ["NLP",
         "Automation"]
 +++
 
