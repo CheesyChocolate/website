@@ -176,21 +176,21 @@ footnote_backlinks = false
 
 # Enable KaTeX for all posts.
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-katex = false
+katex = true
 
 # Enable Mermaid diagrams for all posts.
 # Loads ~2.5MB of JavaScript.
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-mermaid = false
+mermaid = true
 
 # Serve Mermaid JavaScript locally. Version bundled with tabi.
 # If set to false, it will load the latest version from JSDelivr.
 # Only relevant when `mermaid = true`.
-serve_local_mermaid = true
+serve_local_mermaid = false
 
 # Show links to previous and next articles at the bottom of posts.
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-show_previous_next_article_links = false
+show_previous_next_article_links = true
 
 # Invert order of the links to previous and next articles at the bottom of posts.
 # By default, next articles are on the left side of the page and previous articles are on the right side.
@@ -205,11 +205,11 @@ previous_next_article_links_full_width = true
 # Quick navigation buttons.
 # Adds "go up" and "go to comments" buttons on the bottom right (hidden for mobile).
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-quick_navigation_buttons = false
+quick_navigation_buttons = true
 
 # Add a Table of Contents to posts, right below the title and metadata.
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-toc = false
+toc = true
 
 # Date format used when listing posts (main page, /blog section, tag posts list…)
 # Default is "6th July 2049" in English and "%d %B %Y" in other languages.
