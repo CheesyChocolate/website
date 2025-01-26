@@ -97,7 +97,35 @@ effective are:
     responsible for the low-level tasks like crawling the web, extracting
     information, summarizing it, and presenting it in a readable format.
 
-![Master-Slave Architecture](flow-02.webp)
+{% mermaid() %}
+graph TD;
+        __start__([<p>__start__</p>]):::first
+        master_agent(master_agent)
+        rag_search_filter(rag_search_filter)
+        rag_search(rag_search)
+        fetch_arxiv(fetch_arxiv)
+        web_search(web_search)
+        final_answer(final_answer)
+        __end__([<p>__end__</p>]):::last
+
+        __start__ --> master_agent
+        rag_search_filter --> master_agent
+        rag_search --> master_agent
+        fetch_arxiv --> master_agent
+        web_search --> master_agent
+        final_answer --> __end__
+
+        master_agent -.-> rag_search_filter
+        master_agent -.-> rag_search
+        master_agent -.-> fetch_arxiv
+        master_agent -.-> web_search
+        master_agent -.-> final_answer
+        master_agent -.-> __end__
+
+        classDef default fill:#f2f0ff,line-height:1.2
+        classDef first fill-opacity:0
+        classDef last fill:#bfb6fc
+{% end %}
 
 2. **Flow-Based Architecture**: In this architecture, the flow of information
    is represented as a directed graph. Each node in the graph is a task, and
@@ -106,7 +134,34 @@ effective are:
    also backtrack if it gets stuck at a task or needs to redo a task. In this
    example, the emphasis is on self-reflective nature of implementation.
 
-![Flow-Based Architecture](flow-01.webp){height=50%}
+{% mermaid() %}
+graph TD;
+        __start__([<p>__start__</p>]):::first
+        generic_chat(generic_chat)
+        embed_uploaded_document(embed_uploaded_document)
+        generate_query(generate_query)
+        web_research(web_research)
+        summarize_sources(summarize_sources)
+        reflect_on_summary(reflect_on_summary)
+        finalize_summary(finalize_summary)
+        __end__([<p>__end__</p>]):::last
+
+        embed_uploaded_document --> web_research;
+        finalize_summary --> __end__;
+        generate_query --> embed_uploaded_document;
+        generic_chat --> __end__;
+        summarize_sources --> reflect_on_summary;
+        web_research --> summarize_sources;
+
+        __start__ -.-> generate_query;
+        __start__ -.-> generic_chat;
+        reflect_on_summary -.-> finalize_summary;
+        reflect_on_summary -.-> web_research;
+
+        classDef default fill:#f2f0ff,line-height:1.2
+        classDef first fill-opacity:0
+        classDef last fill:#bfb6fc
+{% end %}
 
 ## Implementation
 
