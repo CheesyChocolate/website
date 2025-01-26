@@ -28,20 +28,38 @@ Then just run the `.conf` file created by the above command:
 quickemu --vm macos-ventura.conf
 ```
 
-Choose the `macOS Base System` ...
+1. Choose the `macOS Base System` using the keyboard arrow keys and press
+   `Enter`. (Note: The mouse doesn't work in this menu.)
 
-Choose the `Disk Utility` ...
+2. Choose the `Disk Utility` and press `Continue`.
 
-Find the large disk (size > 100 GB) and erase it. Choose `APFS` if you want to
-use the disk for macOS only inside the VM. Choose `macOS Extended (Journaled)`
-if you want compatibility with Linux, and you want to share the disk between
-operating systems. Then go back to the main menu.
+3. Find the large disk (size ~100 GB) and erase it. The name of the drive
+   might be `Apple Inc. VirtIO Block Device`.
 
-Choose `Reinstall macOS` ...
+4. In the `Erase` dialog, choose the following options:
+    - Name: `Apple VirtIO Block` (or any name you like)
+    - Format: `APFS`
+    - Scheme: `GUID Partition Map`
 
-Choose the disk you just erased ...
+5. Click `Erase` and then `Done`. And then close the `Disk Utility`.
 
-On boot, choose the disk name you just installed macOS on ...
+<!-- NOTE: MacOS Extended may not work with the Mojave or later versions. -->
+<!-- Choose `APFS` if you want to use the disk for macOS only inside the VM. Choose -->
+<!-- `macOS Extended (Journaled)` if you want compatibility with Linux, and you want -->
+<!-- to share the disk between operating systems. Then go back to the main menu. -->
+
+6. Choose `Reinstall macOS` and click `Continue`.
+
+<!-- Choose the disk you just erased ... -->
+
+7. Choose the `Apple VirtIO Block` (or the name you gave) and click `Install`.
+
+8. Wait for the installation to complete. (In VirtIO block, it can take up to
+   15 hours, and in bare metal, it can take up to 15 minutes.)
+
+9. On the first reboot, choose `macOS Installer`.
+
+10. On the second reboot, choose `Apple VirtIO Block` (or the name you gave).
 
 # Post-Installation
 
@@ -68,6 +86,25 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 0
 defaults write com.apple.SoftwareUpdate AutomaticDownload -int 0
 defaults write com.apple.loginwindow DisableScreenLock -bool true
 defaults write com.apple.loginwindow TALLogoutSavesState -bool false
+# Not tested
+defaults write NSGlobalDomain
+defaults write -g QLPanelAnimationDuration -float 0
+defaults write com.apple.dock launchanim -bool false
+# Not tested
+defaults write com.apple.dock autohide-time-modifier -float 0.1
+defaults write com.apple.dock autohide-delay -float 0
+```
+
+## Enable TRIM
+
+```bash
+sudo trimforce enable
+```
+
+## Install `brew`
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ## Change resolution
@@ -112,3 +149,8 @@ NOTE: Skip step 1 to 3 if the resolutions already exist in BIOS.
     - Press `F10` to save the changes.
     - Press `Escape` multiple times to come back to main menu, and then select
     `Continue` on it.
+
+## Install useful software
+
+- [iTerm2](https://iterm2.com/)
+- [magnet](https://magnet.crowdcafe.com/)
