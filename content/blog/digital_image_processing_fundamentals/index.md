@@ -7,6 +7,9 @@ description = "The basic glossary and concepts of digital image processing (Shor
 [taxonomies]
 tags = ["image-processing",
         "Review",]
+
+[extra]
+toc = false
 +++
 
 # Overview
@@ -124,6 +127,109 @@ Sacrifices quality for smaller file size (i.e., JPEG).
 domain.
 - Quantization: Reduces precision of DCT coefficients.
 - Entropy Encoding: Variable-length encoding based on probability of symbols.
+
+---
+
+# Quiz
+
+## Question 0x01
+
+Approaches to image processing that work directly on the pixels of incoming image work in ____________.
+
+1. [ ] Spatial domain
+2. [ ] Inverse transformation
+3. [ ] Transform domain
+4. [ ] None of the Mentioned
+
+### Answer 0x01
+
+{{spoiler(fixed_blur=true, text=
+"1. Spatial domain. The spatial domain refers to the image plane itself, where
+the image is defined by its pixel values."
+)}}
+
+## Question 0x02
+
+Which of the following is the primary objective of sharpening of an image?
+
+1. [ ] Decrease the brightness of the image
+2. [ ] Increase the brightness of the image
+3. [ ] Highlight fine details in the image
+4. [ ] Blurring the image
+
+### Answer 0x02
+
+{{spoiler(fixed_blur=true, text=
+"3. Sharpening an image aids in highlighting small features in the image or
+enhancing details that have become blurred owing to factors such as noise
+addition."
+)}}
+
+## Question 0x03
+
+Which of the following makes an image difficult to enhance?
+
+1. [ ] Dynamic range of intensity levels
+2. [ ] High noise
+3. [ ] Narrow range of intensity levels
+4. [ ] All of the mentioned
+
+### Answer 0x03
+
+{{spoiler(fixed_blur=true, text=
+"4. Dynamic range of intensity levels, High noise and Narrow range of intensity
+levels make it difficult to enhance an image."
+)}}
+
+## Question 0x04
+
+Which of the following is the application of Histogram Equalisation?
+
+1. [ ] Blurring
+2. [ ] Contrast adjustment
+3. [ ] Image enhancement
+4. [ ] None of the Mentioned
+
+### Answer 0x04
+
+{{spoiler(fixed_blur=true, text=
+"3. Dark images are usually Enhancement using Image enhancement."
+)}}
+
+## Question 0x05
+
+What is/are the resultant image of a smoothing filter?
+
+1. [ ] Image with reduced sharp transitions in gray levels
+2. [ ] Image with high sharp transitions in gray levels
+3. [ ] None of the mentioned
+4. [ ] All of the mentioned
+
+### Answer 0x05
+
+{{spoiler(fixed_blur=true, text=
+"1. Explanation: Smoothing filters reduce noise in random noise, which features
+sharp grey level transitions."
+)}}
+
+## Question 0x06
+
+___________ is/are the feature(s) of a highpass filtered image.
+
+1. [ ] An overall sharper image
+2. [ ] Have less gray-level variation in smooth areas
+3. [ ] Emphasized transitional gray-level details
+4. [ ] All of the mentioned
+
+### Answer 0x06
+
+{{spoiler(fixed_blur=true, text=
+"4. Explanation: A highpass filter reduces the low frequency to reduce
+grey-level variance in smooth sections while allowing high frequencies to
+emphasize transitional gray-level details for a clearer image."
+)}}
+
+---
 
 # Recourses
 
