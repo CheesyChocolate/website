@@ -56,9 +56,9 @@ generate_feeds = true
 taxonomies = [{name = "tags", feed = true}]
 build_search_index = true
 
-[languages.ca]
+[languages.pt-BR]
 title = "Behnam Lal"
-description = "M'agrada pescar."
+description = "Gosto de pescar."
 generate_feeds = true
 taxonomies = [{name = "tags", feed = true}]
 
