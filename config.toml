@@ -61,6 +61,22 @@ title = "Behnam Lal"
 description = "Gosto de pescar."
 generate_feeds = true
 taxonomies = [{name = "tags", feed = true}]
+# TODO: Add search index for Portuguese. link to pt same as pt-PT
+
+[languages.tr]
+title = "Behnam Lal"
+description = "Balık tutmayı severim."
+generate_feeds = true
+taxonomies = [{name = "tags", feed = true}]
+build_search_index = true
+
+[languages.fa]
+title = "Behnam Lal"
+description = "من از ماهیگیری لذت می برم."
+generate_feeds = true
+taxonomies = [{name = "tags", feed = true}]
+# TODO: There's no support for Persian in the elasticlunr search index.
+# Contributing to upstream.
 
 [extra]
 # Check out the documentation (or the comments below) to learn how to customise tabi:
