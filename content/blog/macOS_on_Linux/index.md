@@ -1,7 +1,7 @@
 +++
 title = "macOS on Linux"
 date = 2025-01-24
-updated = 2025-01-26
+updated = 2025-01-27
 description = "How to run macOS on Linux, and how to optimize and configure macOS post-installation."
 
 [taxonomies]
@@ -15,17 +15,17 @@ There are docker, script, and many other ways to run macOS on Linux. But I
 found the [quickemu](https://github.com/quickemu-project/quickemu) to be the
 easiest and fastest way to run macOS on Linux.
 
-The latest version of macOS that I could get to work is `ventura`. To get the
-`ventura` version, you can use the following command:
+The latest version of macOS that I could get to work is `sequoia`. To get the
+`sequoia` version, you can use the following command:
 
 ```bash
-quickget macos ventura
+quickget macos sequoia
 ```
 
 Then just run the `.conf` file created by the above command:
 
 ```bash
-quickemu --vm macos-ventura.conf
+quickemu --vm macos-sequoia.conf
 ```
 
 1. Choose the `macOS Base System` using the keyboard arrow keys and press
