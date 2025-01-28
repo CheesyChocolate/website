@@ -430,6 +430,137 @@ frequencies in the image. Image compression, Edge detection, and
 Morphological transformation are not direct applications of the FFT."
 )}}
 
+## Question 0x12
+
+Which type of noise is best reduced using an adaptive filter?
+
+1. [ ] Gaussian noise
+2. [ ] Salt-and-pepper noise
+3. [ ] Speckle noise
+4. [ ] Periodic noise
+
+### Answer 0x12
+
+{{spoiler(fixed_blur=true, text=
+"1. Gaussian noise. Adaptive filters are best suited for reducing Gaussian
+noise, which is random and can vary in intensity. Median filters are more
+effective for reducing salt-and-pepper noise, and Wiener filters are commonly
+used for reducing speckle noise. Periodic noise can be reduced using
+frequency-domain filtering techniques."
+)}}
+
+## Question 0x13
+
+Which of the following is NOT an image restoration technique?
+
+1. [ ] Inverse filtering
+2. [ ] Wiener filtering
+3. [ ] Image thresholding
+4. [ ] Blind deconvolution
+
+### Answer 0x13
+
+{{spoiler(fixed_blur=true, text=
+"3. Image thresholding. Image thresholding is a segmentation technique used to
+convert a grayscale image into a binary image based on intensity levels.
+Inverse filtering, Wiener filtering, and Blind deconvolution are all image
+restoration techniques used to recover the original image from a degraded or
+noisy version."
+)}}
+
+## Question 0x14
+
+Which of the following transforms is most commonly used for edge detection?
+
+1. [ ] Hough Transform
+2. [ ] Discrete Cosine Transform
+3. [ ] Wavelet Transform
+4. [ ] Laplacian Transform
+
+### Answer 0x14
+
+{{spoiler(fixed_blur=true, text=
+"4. Laplacian Transform. The Laplacian transform is commonly used for edge
+detection in image processing. The Hough Transform is used for line detection,
+the Discrete Cosine Transform is used for image compression, and the Wavelet
+Transform is used for multi-resolution analysis."
+)}}
+
+## Question 0x15
+
+What is the purpose of a Gaussian filter in image smoothing?
+
+1. [ ] To enhance contrast
+2. [ ] To preserve edges while reducing noise
+3. [ ] To remove high-frequency components
+4. [ ] To segment objects in an image
+
+### Answer 0x15
+
+{{spoiler(fixed_blur=true, text=
+"2. To preserve edges while reducing noise. A Gaussian filter is used in image
+smoothing to reduce noise while preserving edges. It achieves this by
+convolving the image with a Gaussian kernel that reduces high-frequency
+components while maintaining the overall structure of the image."
+)}}
+
+## Question 0x16
+
+Which of the following is used for noise removal while preserving image details?
+
+1. [ ] High-pass filter
+2. [ ] Adaptive filter
+3. [ ] Histogram equalization
+4. [ ] Erosion
+
+### Answer 0x16
+
+{{spoiler(fixed_blur=true, text=
+"2. Adaptive filter. Adaptive filters are used for noise removal while
+preserving image details by adjusting the filter coefficients based on the
+local image characteristics. High-pass filters are used to enhance edges and
+fine details, Histogram equalization is used for contrast enhancement, and
+Erosion is a morphological operation used to shrink objects in binary images."
+)}}
+
+## Question 0x17
+
+Which of the following methods is most suitable for detecting circular objects in an image?
+
+1. [ ] Sobel edge detection
+2. [ ] Hough Transform
+3. [ ] Fourier Transform
+4. [ ] Laplacian filtering
+
+### Answer 0x17
+
+{{spoiler(fixed_blur=true, text=
+"2. Hough Transform. The Hough Transform is most suitable for detecting
+circular objects in an image by representing them as points in parameter space.
+Sobel edge detection is used for edge detection, Fourier Transform is used for
+frequency domain analysis, and Laplacian filtering is used for edge detection."
+)}}
+
+## Question 0x18
+
+Which of the following is a common application of morphological operations in
+image processing?
+
+1. [ ] Edge detection
+2. [ ] Noise reduction
+3. [ ] Shape analysis
+4. [ ] Color correction
+
+### Answer 0x18
+
+{{spoiler(fixed_blur=true, text=
+"3. Shape analysis. Morphological operations are commonly used for shape
+analysis in image processing, where they modify the shape of objects based on
+their structure. Edge detection is performed using edge detection algorithms,
+Noise reduction is achieved using filters, and Color correction is done using
+color space transformations."
+)}}
+
 ---
 
 # Recourses
