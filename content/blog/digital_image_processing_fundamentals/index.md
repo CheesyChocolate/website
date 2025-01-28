@@ -369,7 +369,7 @@ What does the term "image thresholding" refer to?
 "3. Converting an image into a binary image based on intensity levels. Image
 thresholding is the process of converting a grayscale image into a binary image
 by segmenting the image based on intensity levels. Converting a color image to
-grayscale is known as color space conversion.
+grayscale is known as color space conversion."
 )}}
 
 ## Question 0x0f
