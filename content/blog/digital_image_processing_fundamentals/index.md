@@ -1,7 +1,7 @@
 +++
 title = "Digital Image Processing Fundamentals"
 date = 2025-01-27
-updated = 2025-01-27
+updated = 2025-01-28
 description = "The basic glossary and concepts of digital image processing (Short review)."
 
 [taxonomies]
@@ -134,7 +134,8 @@ domain.
 
 ## Question 0x01
 
-Approaches to image processing that work directly on the pixels of incoming image work in ____________.
+Approaches to image processing that work directly on the pixels of incoming
+image work in ____________.
 
 1. [ ] Spatial domain
 2. [ ] Inverse transformation
@@ -172,7 +173,7 @@ Which of the following makes an image difficult to enhance?
 1. [ ] Dynamic range of intensity levels
 2. [ ] High noise
 3. [ ] Narrow range of intensity levels
-4. [ ] All of the mentioned
+4. [ ] All the mentioned
 
 ### Answer 0x03
 
@@ -183,7 +184,7 @@ levels make it difficult to enhance an image."
 
 ## Question 0x04
 
-Which of the following is the application of Histogram Equalisation?
+Which of the following is the application of Histogram Equalization?
 
 1. [ ] Blurring
 2. [ ] Contrast adjustment
@@ -203,13 +204,13 @@ What is/are the resultant image of a smoothing filter?
 1. [ ] Image with reduced sharp transitions in gray levels
 2. [ ] Image with high sharp transitions in gray levels
 3. [ ] None of the mentioned
-4. [ ] All of the mentioned
+4. [ ] All the mentioned
 
 ### Answer 0x05
 
 {{spoiler(fixed_blur=true, text=
 "1. Explanation: Smoothing filters reduce noise in random noise, which features
-sharp grey level transitions."
+sharp gray level transitions."
 )}}
 
 ## Question 0x06
@@ -225,8 +226,208 @@ ___________ is/are the feature(s) of a highpass filtered image.
 
 {{spoiler(fixed_blur=true, text=
 "4. Explanation: A highpass filter reduces the low frequency to reduce
-grey-level variance in smooth sections while allowing high frequencies to
+gray-level variance in smooth sections while allowing high frequencies to
 emphasize transitional gray-level details for a clearer image."
+)}}
+
+## Question 0x07
+
+Which of the following techniques is used for edge detection in images?
+
+1. [ ] Histogram equalization
+2. [ ] Fourier transform
+3. [ ] Sobel operator
+4. [ ] Dilation
+
+### Answer 0x07
+
+{{spoiler(fixed_blur=true, text=
+"3. Sobel operator. Histogram equalization is used for contrast enhancement,
+Fourier transform is used for frequency domain analysis, and Dilation is used
+for morphological operations."
+)}}
+
+## Question 0x08
+
+What is the purpose of the Fourier transform in image processing?
+
+1. [ ] To detect edges in an image
+2. [ ] To convert an image from the spatial domain to the frequency domain
+3. [ ] To compress an image
+4. [ ] To apply a filter to an image
+
+### Answer 0x08
+
+{{spoiler(fixed_blur=true, text=
+"2. To convert an image from the spatial domain to the frequency domain."
+)}}
+
+## Question 0x09
+
+Which of the following is the correct definition of "morphological operations"
+in image processing?
+
+1. [ ] Operations based on the pixel values
+2. [ ] Operations based on the shape or structure of objects in the image
+3. [ ] Operations based on color histograms
+4. [ ] Operations based on frequency domain transformations
+
+### Answer 0x09
+
+{{spoiler(fixed_blur=true, text=
+"2. Operations based on the shape or structure of objects in the image.
+Morphological operations are used to modify the shape of objects in an image
+based on their structure."
+)}}
+
+## Question 0x0a
+
+In the context of image segmentation, what is thresholding used for?
+
+1. [ ] To segment an image based on pixel intensity
+2. [ ] To detect edges
+3. [ ] To compress the image
+4. [ ] To apply filters to the image
+
+### Answer 0x0a
+
+{{spoiler(fixed_blur=true, text=
+"1. To segment an image based on pixel intensity. Thresholding is used to
+convert a grayscale image into a binary image by segmenting the image based on
+pixel intensity. Sobel, Canny, and Prewitt operators are used for edge
+detection. Filters are used for image enhancement and restoration."
+)}}
+
+## Question 0x0b
+
+Which of the following techniques can be used for image resizing?
+
+1. [ ] Bilinear interpolation
+2. [ ] Sobel edge detection
+3. [ ] Fast Fourier Transform
+4. [ ] Median filtering
+
+### Answer 0x0b
+
+{{spoiler(fixed_blur=true, text=
+"1. Bilinear interpolation. Bilinear interpolation is a method used for image
+resizing that calculates new pixel values based on the weighted average of
+surrounding pixels. Sobel edge detection is used for edge detection, Fast
+Fourier Transform is used for frequency domain analysis, and Median filtering
+is used for noise reduction."
+)}}
+
+## Question 0x0c
+
+Which of the following algorithms is commonly used for image compression?
+
+1. [ ] Canny edge detector
+2. [ ] Run-length encoding
+3. [ ] K-means clustering
+4. [ ] Gradient descent
+
+### Answer 0x0c
+
+{{spoiler(fixed_blur=true, text=
+"2. Run-length encoding. Run-length encoding is a lossless compression
+algorithm commonly used for image compression. The Canny edge detector is used
+for edge detection, K-means clustering is used for image segmentation, and
+Gradient descent is an optimization algorithm."
+)}}
+
+## Question 0x0d
+
+Which method is commonly used for removing salt-and-pepper noise from an image?
+
+1. [ ] Gaussian smoothing
+2. [ ] Median filtering
+3. [ ] Histogram equalization
+4. [ ] Edge detection
+
+### Answer 0x0d
+
+{{spoiler(fixed_blur=true, text=
+"2. Median filtering. Median filtering is commonly used for removing
+salt-and-pepper noise from an image by replacing pixel values with the median
+of neighboring pixels. Gaussian smoothing is used for noise reduction and
+blurring, Histogram equalization is used for contrast enhancement, and Edge
+detection is used for detecting edges in an image."
+)}}
+
+## Question 0x0e
+
+What does the term "image thresholding" refer to?
+
+1. [ ] Converting a color image to grayscale
+2. [ ] Detecting edges in an image
+3. [ ] Converting an image into a binary image based on intensity levels
+4. [ ] Enhancing image contrast
+
+### Answer 0x0e
+
+{{spoiler(fixed_blur=true, text=
+"3. Converting an image into a binary image based on intensity levels. Image
+thresholding is the process of converting a grayscale image into a binary image
+by segmenting the image based on intensity levels. Converting a color image to
+grayscale is known as color space conversion.
+)}}
+
+## Question 0x0f
+
+Which of the following techniques is used to obtain a sharper image by
+highlighting high-frequency components?
+
+1. [ ] Low-pass filtering
+2. [ ] High-pass filtering
+3. [ ] Median filtering
+4. [ ] Histogram equalization
+
+### Answer 0x0f
+
+{{spoiler(fixed_blur=true, text=
+"2. High-pass filtering. High-pass filtering is used to highlight
+high-frequency components in an image, resulting in a sharper image. Low-pass
+filtering is used to remove high-frequency noise, Median filtering is used for
+noise reduction, and Histogram equalization is used for contrast enhancement."
+)}}
+
+## Question 0x10
+
+In which of the following situations is a bilateral filter most useful?
+
+1. [ ] Reducing Gaussian noise
+2. [ ] Blurring an image
+3. [ ] Preserving edges while smoothing an image
+4. [ ] Detecting edges
+
+### Answer 0x10
+
+{{spoiler(fixed_blur=true, text=
+"3. Preserving edges while smoothing an image. A bilateral filter is most
+useful when you want to smooth an image while preserving edges. It achieves
+this by considering both spatial and intensity differences between pixels.
+Reducing Gaussian noise is typically done with a Gaussian filter, Even though
+bilateral filter uses Gaussian kernel, it is not used for reducing Gaussian
+noise."
+)}}
+
+## Question 0x11
+
+What is a common application of the Fast Fourier Transform (FFT) in image processing?
+
+1. [ ] Image compression
+2. [ ] Edge detection
+3. [ ] Frequency domain filtering
+4. [ ] Morphological transformation
+
+### Answer 0x11
+
+{{spoiler(fixed_blur=true, text=
+"3. Frequency domain filtering. The FFT is commonly used in image processing to
+convert an image from the spatial domain to the frequency domain, where
+frequency domain filtering can be applied to enhance or suppress specific
+frequencies in the image. Image compression, Edge detection, and
+Morphological transformation are not direct applications of the FFT."
 )}}
 
 ---
