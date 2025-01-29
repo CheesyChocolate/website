@@ -14,6 +14,163 @@ toc = false
 
 # Overview
 
+## Introduction to Simulation
+
+- **Definition:** Simulation is the process of creating a model of a real-world
+system and conducting experiments to understand and predict its behavior.
+- **Types of Simulation:**
+  - **Static Simulation:** Models do not change over time (e.g., Monte Carlo
+  methods).
+  - **Dynamic Simulation:** Models evolve over time based on system rules.
+  - **Deterministic Simulation:** No randomness, same inputs lead to the same
+  outputs.
+  - **Stochastic Simulation:** Includes randomness, outputs vary.
+  - **Continuous Simulation:** System state changes continuously over time.
+  - **Discrete Simulation:** State changes at distinct points in time.
+- **Static Simulation Examples:** Basic probability calculations, risk
+analysis.
+
+## Simulation Advantages, Disadvantages, and Steps
+
+- **Advantages:**
+  - Allows experimentation without physical implementation.
+  - Identifies potential system improvements.
+  - Can analyze scenarios that are dangerous or impractical to test in real
+  life.
+- **Disadvantages:**
+  - Requires extensive data collection and validation.
+  - Can be time-consuming and computationally expensive.
+  - Results are model-dependent and may not perfectly reflect reality.
+- **Steps in Simulation:**
+  1. Define the problem and objectives.
+  2. Develop a conceptual model.
+  3. Collect data and identify probability distributions.
+  4. Implement the model in simulation software.
+  5. Conduct simulation experiments and collect results.
+  6. Analyze the results and refine the model.
+  7. Validate and verify the model.
+- **Dynamic Simulation Examples:** Inventory control, climate modeling, traffic
+systems.
+
+## Discrete Event Simulation (DES)
+
+- **Key Components:**
+  - **Entities:** Objects that flow through the system (e.g., customers,
+  machines).
+  - **Attributes:** Characteristics of entities (e.g., service time, arrival
+  rate).
+  - **Events:** Occurrences that change the system state (e.g., arrival,
+  departure).
+  - **System State:** Set of variables that define the system at a given time.
+  - **Statistical Collectors:** Tools to measure and analyze performance (e.g.,
+  waiting times, throughput).
+- **Collection of Statistics:** Helps in evaluating the efficiency of different
+configurations.
+- **Hand Simulation:** Step-by-step manual simulation to verify model logic
+before software implementation.
+
+## Model Verification and Validation
+
+- **Verification:** Ensuring the simulation model is correctly implemented.
+- **Validation:** Ensuring the model accurately represents the real system.
+- **Techniques for Validation:**
+  - Face validation (expert review)
+  - Historical data comparison
+  - Sensitivity analysis
+- **Example:** Simulating a Single-Server Queueing System:
+  - Customers arrive at a service desk based on an interarrival distribution.
+  - The server processes customers according to a service time distribution.
+  - Performance metrics: Average queue length, server utilization, customer
+  waiting time.
+
+## Input Distribution Fitting
+
+- **Why it Matters:** Real-world processes have inherent variability, requiring
+statistical distribution modeling.
+- **Common Probability Distributions:**
+  - **Exponential:** Common for interarrival times.
+  - **Normal:** Used for processes following a bell-curve pattern.
+  - **Uniform:** Used for evenly distributed random variables.
+  - **Poisson:** Used for modeling event occurrence rates.
+- **Techniques for Distribution Fitting:**
+  - Histogram fitting
+  - Goodness-of-fit tests (Chi-Square, Kolmogorov-Smirnov test)
+  - Maximum likelihood estimation
+
+## Random Number Generators (RNG)
+
+- **Purpose:** Generates sequences of pseudo-random numbers for simulation
+experiments.
+- **Common Methods:**
+  - **Linear Congruential Generator (LCG):** Uses modular arithmetic.
+  - **Mersenne Twister:** High-quality random number generator used in modern
+  simulations.
+  - **Inverse Transform Sampling:** Converts uniform random numbers to desired
+  distributions.
+- **Random Number Generators in Simulation Software:** Built-in functions in
+AnyLogic, SimPy, Arena, etc.
+
+## Output Analysis - Terminating Simulations
+
+- **Terminating Simulations:**
+  - Have a natural stopping point (e.g., store closing, project duration).
+  - Require replication to obtain reliable statistical measures.
+- **Performance Measures:** Mean, variance, confidence intervals.
+- **Techniques for Output Analysis:**
+  - Replicated runs with different seeds.
+  - Confidence interval estimation.
+  - Analyzing run variability.
+
+## Output Analysis - Steady-State Simulations
+
+- **Definition:** Simulations that run indefinitely or until statistical
+stability is reached.
+- **Key Metrics:**
+  - System equilibrium state.
+  - Mean performance over time.
+- **Techniques:**
+  - Removing transient (warm-up) period.
+  - Using batch means method to estimate steady-state averages.
+  - Analyzing autocorrelation in simulation results.
+
+## Agent-Based Simulation (ABS)
+
+- **Definition:** Uses autonomous agents that interact with each other and
+their environment.
+- **Applications:**
+  - Social behavior modeling
+  - Traffic congestion analysis
+  - Market simulation
+  - Epidemic spread analysis
+- **Components:**
+  - **Agents:** Independent decision-making entities.
+  - **Environment:** Space where agents interact.
+  - **Rules & Behaviors:** Governs agent actions.
+
+## Using Agents for Complex Systems Evaluation
+
+- **Why Use ABS?**
+  - Captures emergent behaviors.
+  - Models decentralized decision-making.
+  - Incorporates adaptive learning mechanisms.
+- **Application Areas:**
+  - Smart city planning.
+  - Ecological system analysis.
+  - Economic modeling.
+
+## Multi-Agent Systems and Populations
+
+- **Multi-Agent Systems (MAS):** Simulations where multiple agents influence
+each other.
+- **Key Principles:**
+  - **Autonomy:** Agents operate independently.
+  - **Communication:** Agents share information.
+  - **Adaptation:** Agents learn and evolve.
+- **Examples:**
+  - Swarm intelligence (e.g., flocking birds, ant colony optimization).
+  - Self-organizing traffic control.
+  - Stock market trading models.
+
 ---
 
 # Quiz
