@@ -304,6 +304,7 @@ socials = [
 	{ name = "telegram", url = "https://t.me/BL_M00", icon = "telegram" },
 	{ name = "whatapp", url = "https://wa.me/905411959218", icon = "whatsapp" },
 	{ name = "Bitcoin", url = "https://www.blockchain.com/explorer/addresses/btc/bc1q3rv6f3mrec7q2ynlg48rx40ktv883v0l3xvunf", icon = "bitcoin" },
+	{ name = "Monero", url = "https://moneroexplorer.org/search?value=47cF9gNYsHGah2xzL9yXemR9Wt8BpmVuoeciZdrTxFRYNjAqfr8sZDPFwKgEZR6GDM9Q2YCd9wGB2PiZDeEkkt5b93iKqqX" , icon = "monero" },
 ]
 
 # Fediverse profile.
