@@ -154,3 +154,4 @@ NOTE: Skip step 1 to 3 if the resolutions already exist in BIOS.
 
 - [iTerm2](https://iterm2.com/)
 - [magnet](https://magnet.crowdcafe.com/)
+- [Rectangle](https://rectangleapp.com/)
