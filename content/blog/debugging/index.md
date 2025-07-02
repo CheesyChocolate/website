@@ -9,6 +9,8 @@ tags = ["programming",
         "tutorial"]
 +++
 
+<!-- TODO: fmt -->
+<!-- TODO: https://www.techtarget.com/searchSoftwareQuality/tip/The-rubber-duck-method-of-debugging-explained -->
 
 # Introduction
 
@@ -354,7 +356,7 @@ You might not need to get your hands dirty with the code.
 ![IDE with LSP and quick fix](./fig/pic-2.png)
 
 
-With these tools we can easily find any runtime errors in code.
+With these tools we can easily find any compile time errors in code.
 
 ![Errors](./fig/meme-1.png)
 
@@ -483,23 +485,55 @@ Success!
 
 ## Unit testing or test cases
 
-What if the inputs are not as simple, or you might not know all the edge cases?
+So what happens when your program gets bigger? Or when you're not sure about
+all the weird edge cases? That's where unit testing comes in. Think of it as
+writing code to check if your *other* code is behaving itself.
 
-In this case, you can use unit testing to test your code.
-Unit testing is a way to test your code by writing code.
+Going full-on into unit testing is a whole other adventure, but let's peek at a
+quick example to see why it's so cool. Let's say you've got this `Calculator`
+class:
 
-However, The topic of unit testing is beyond the scope of this tutorial.
-Besides, writing unit tests needs more knowledge of Java.
+**Code to be tested:**
 
-Unit test is not preferred for debugging small code.
+```java
+public class Calculator {
+    public int add(int a, int b) {
+        // Let's pretend there's a bug here
+        return a + b;
+    }
+}
+```
 
-Unit tests just inform the developer that an unexpected behavior has occurred.
-It gives no information about the cause of the problem.
+Instead of running your app and printing stuff to see if `add` works, you can
+write a special test for it. With a tool like JUnit, it looks something like
+this:
 
-But test cases are one of the crucial parts of big projects that are developed
-by multiple developers.
+**JUnit Test Case:**
 
-It ensures that the code is working as expected.
+```java
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class CalculatorTest {
+    @Test
+    void testAdd() {
+        Calculator calculator = new Calculator();
+        int result = calculator.add(2, 3);
+        assertEquals(5, result); // This line checks if the result is 5
+    }
+}
+```
+
+This little test automatically runs your `add` method with `2` and `3` and
+screams at you if the result isn't `5`. If you change your `add` method later
+and accidentally break it, this test will fail and let you know immediately.
+It's like having a personal robot that constantly checks your work.
+
+Unit tests are a lifesaver on big projects. They act as a safety net, making
+sure that when you add a new feature, you don't accidentally wreck an old one.
+They also kind of work as living documentation for your code. While a test
+won't tell you *exactly* where the bug is like a debugger can, it will tell you
+*what* broke. And knowing what's broken is half the battle.
 
 ![Unit test](./fig/meme-5.png)
 
